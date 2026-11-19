@@ -1,0 +1,34 @@
+{
+  "app_name": "Ethernet Tester",
+  "package_name": "ethernet-tester",
+  "version": "1.0.0",
+  "description": "Read-only Ethernet diagnostics, gateway checks and local network discovery for CardputerZero",
+
+  "store": {
+    "summary": "Read-only Ethernet diagnostics, gateway checks and local device discovery.",
+    "description": "Ethernet Tester provides read-only diagnostics for eth0: link state, speed and duplex, available interface counters, IPv4/MAC/gateway and DNS configuration, driver metadata, and current systemd-networkd DHCP lease details where supported. It can send one ping to the configured gateway and show a snapshot of cumulative interface counters; this is not a throughput test. On explicit user action, it can scan the local IPv4 subnet with arp-scan, browse mDNS/DNS-SD services, or make one PTR lookup for the gateway. Separate passive views listen for LLDP/CDP switch announcements and ARP, DHCP and STP frames; no packet capture is saved. The package grants cap_net_raw to the executable for passive listening. The app does not configure the interface, renew DHCP, or request CAP_NET_ADMIN.",
+    "categories": ["System Tools", "Hardware & IoT"],
+    "screenshots": [
+      "screenshots/summary.png",
+      "screenshots/link.png",
+      "screenshots/ping.png",
+      "screenshots/peers.png",
+      "screenshots/mdns.png",
+      "screenshots/dhcp.png"
+    ],
+    "icon": "assets/images/ethernet-tester.png",
+    "license": "MIT",
+    "source_repo": "https://github.com/LBreda/cp0-ethernet-tester",
+    "author": { "github": "lbreda", "display_name": "Lorenzo Breda" },
+    "share_code": "eth0",
+    "permissions": {
+      "camera": false,
+      "microphone": false,
+      "imu": false,
+      "network": true,
+      "additional_hardware": false,
+      "background_service": false,
+      "external_display": false
+    }
+  }
+}
